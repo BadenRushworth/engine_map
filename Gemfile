@@ -15,7 +15,7 @@ gem "rubocop-rails-omakase", require: false
 
 # Termux-specific additions
 gem "tzinfo-data"
-gem "nokogiri", "1.18.10"
+gem "nokogiri", "1.19.4"
 
 # Dummy app / test dependencies (not runtime deps of the gem)
 gem "rails"
