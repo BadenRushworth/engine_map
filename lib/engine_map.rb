@@ -126,8 +126,8 @@ module EngineMap
     # Dev only: drop the cached map when the engine's importmap file or JS changes.
     def watch(registration)
       return unless reloading?
-      dirs = [registration.root.join("app/javascript")].select(&:exist?).to_h { |d| [d.to_s, ["js"]] }
-      watchers[registration.name] = Rails.application.config.file_watcher.new([registration.importmap_path.to_s], dirs) do
+      dirs = [ registration.root.join("app/javascript") ].select(&:exist?).to_h { |d| [ d.to_s, [ "js" ] ] }
+      watchers[registration.name] = Rails.application.config.file_watcher.new([ registration.importmap_path.to_s ], dirs) do
         maps.delete(registration.name)
       end
     end

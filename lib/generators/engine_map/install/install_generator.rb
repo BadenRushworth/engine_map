@@ -79,9 +79,9 @@ module EngineMap
           needs_manual("no layout found (add these inside <head> of the layout your engine uses)")
           js = if options[:importmap] == "own"
                  %(    <%= #{name}_javascript_importmap_tags %>)
-               else
+          else
                  %(    <%= javascript_importmap_tags %>\n    <%= javascript_import_module_tag "#{name}/application" %>)
-               end
+          end
           say %(    <%= engine_stylesheet_link_tags "#{name}", :all %>\n#{js}), :cyan
           return
         end
@@ -153,7 +153,7 @@ module EngineMap
 
       def snapshot
         files = Dir[File.join(destination_root, "{app,config,lib}/**/*"), File.join(destination_root, "*.gemspec")]
-        files.select { |f| File.file?(f) }.sort.map { |f| [f, Digest::MD5.file(f).hexdigest] }
+        files.select { |f| File.file?(f) }.sort.map { |f| [ f, Digest::MD5.file(f).hexdigest ] }
       end
 
       def candidates = Rails.application.railties.select { |r| r.is_a?(Rails::Engine) }
@@ -176,7 +176,7 @@ module EngineMap
       end
 
       def importmap_lines
-        lines = [%(pin "#{name}/application")]
+        lines = [ %(pin "#{name}/application") ]
         unless stimulus == "none"
           lines << %(pin_all_from File.expand_path("../app/javascript/#{name}/controllers", __dir__),\n) +
                    %(             under: "controllers/#{name}", to: "#{name}/controllers")

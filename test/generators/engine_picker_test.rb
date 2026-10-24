@@ -14,10 +14,10 @@ class EnginePickerTest < ActiveSupport::TestCase
   end
 
   def picker(**opts)
-    engines = [make_engine("admin_engine", "/work/admin"),
-               make_engine("turbo", "/gems/turbo-rails-2.0")]
+    engines = [ make_engine("admin_engine", "/work/admin"),
+               make_engine("turbo", "/gems/turbo-rails-2.0") ]
     EngineMap::Generators::EnginePicker.new(engines, app: make_engine("host", "/work/host"),
-                                            gem_paths: ["/gems"], cwd: "/work/admin/lib", **opts)
+                                            gem_paths: [ "/gems" ], cwd: "/work/admin/lib", **opts)
   end
 
   test "hides installed gems by default, host app listed first" do
@@ -45,7 +45,7 @@ class EnginePickerTest < ActiveSupport::TestCase
 
   test "isolated engines keep the full name that matches their asset folder" do
     isolated = make_engine("scratch_engine", "/work/s", namespace: Struct.new(:name).new("ScratchEngine"))
-    picker = EngineMap::Generators::EnginePicker.new([isolated], gem_paths: [], cwd: "/")
+    picker = EngineMap::Generators::EnginePicker.new([ isolated ], gem_paths: [], cwd: "/")
     assert_equal "scratch_engine", picker.targets.first.name
   end
 end

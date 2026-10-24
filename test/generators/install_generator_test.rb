@@ -15,7 +15,7 @@ class FakeInstall < EngineMap::Generators::InstallGenerator
       define_singleton_method(:engine_name) { "sample_engine_engine" }
       define_singleton_method(:railtie_namespace) { nil }
     end
-    [klass.new.tap { |e| e.define_singleton_method(:root) { Pathname.new(DEST) } }]
+    [ klass.new.tap { |e| e.define_singleton_method(:root) { Pathname.new(DEST) } } ]
   end
 end
 
