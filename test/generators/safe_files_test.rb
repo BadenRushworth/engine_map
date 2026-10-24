@@ -1,9 +1,9 @@
 require "test_helper"
 require "rails/generators/test_case"
-require "eng_assets/generators/safe_files"
+require "engine_map/generators/safe_files"
 
 class SafeFilesGenerator < Rails::Generators::Base
-  include EngAssets::Generators::SafeFiles
+  include EngineMap::Generators::SafeFiles
   source_root File.expand_path("../fixtures/templates", __dir__)
 end
 

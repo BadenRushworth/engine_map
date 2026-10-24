@@ -1,3 +1,3 @@
-module EngAssets
+module EngineMap
   VERSION = "0.1.0"
 end

@@ -1,9 +1,9 @@
 require "rails/generators"
 require "digest"
-require "eng_assets/generators/safe_files"
-require "eng_assets/generators/engine_picker"
+require "engine_map/generators/safe_files"
+require "engine_map/generators/engine_picker"
 
-module EngAssets
+module EngineMap
   module Generators
     class InstallGenerator < Rails::Generators::Base
       include SafeFiles
@@ -35,8 +35,8 @@ module EngAssets
         return if host?
         file = engine_file
         return manual("lib/<engine>/engine.rb", configure_line, "engine class not found", :yellow) unless file
-        safe_inject file, %(require "eng_assets"), before: /\A/
-        return if File.read(File.join(destination_root, file)).include?("EngAssets.configure")
+        safe_inject file, %(require "engine_map"), before: /\A/
+        return if File.read(File.join(destination_root, file)).include?("EngineMap.configure")
 
         safe_inject file, configure_line, after: ENGINE_CLASS
       end
@@ -44,8 +44,8 @@ module EngAssets
       def add_gem_dependency
         return if host?
         spec = Dir[File.join(destination_root, "*.gemspec")].first
-        return needs_manual("no gemspec found (add `spec.add_dependency \"eng_assets\"` by hand)") unless spec
-        safe_inject relative(spec), %(  spec.add_dependency "eng_assets"), after: /^\s*spec\.add_dependency [^\n]*/
+        return needs_manual("no gemspec found (add `spec.add_dependency \"engine_map\"` by hand)") unless spec
+        safe_inject relative(spec), %(  spec.add_dependency "engine_map"), after: /^\s*spec\.add_dependency [^\n]*/
       end
 
       def create_javascript
@@ -145,8 +145,8 @@ module EngAssets
 
       def import_configured_engines
         entry = "app/javascript/application.js"
-        names = EngAssets.configured.select { |_, mode| %i[merge both].include?(mode) }.keys.sort
-        return say_status(:skipped, "no engines using EngAssets in merge mode", :yellow) if names.empty?
+        names = EngineMap.configured.select { |_, mode| %i[merge both].include?(mode) }.keys.sort
+        return say_status(:skipped, "no engines using EngineMap in merge mode", :yellow) if names.empty?
         return needs_manual("#{entry} not found (import each engine's application module by hand)") unless File.exist?(File.join(destination_root, entry))
         names.each { |n| import_after_last(entry, %(import "#{n}/application")) }
       end
@@ -191,7 +191,7 @@ module EngAssets
 
       def configure_line
         arg = options[:importmap] == "merge" ? "" : ", importmap: :#{options[:importmap]}"
-        "    EngAssets.configure(self#{arg})"
+        "    EngineMap.configure(self#{arg})"
       end
 
       def relative(path) = Pathname.new(path).relative_path_from(Pathname.new(destination_root)).to_s
@@ -207,7 +207,7 @@ module EngAssets
       end
 
       def prompt_for(picker)
-        say "Where should EngAssets be installed?", :bold
+        say "Where should EngineMap be installed?", :bold
         picker.targets.each_with_index { |t, i| say "  #{i + 1}. #{t.label}", :cyan }
         answer = ask("Number:", limited_to: (1..picker.targets.size).map(&:to_s))
         picker.targets[answer.to_i - 1]

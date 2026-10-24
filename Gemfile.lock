@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eng_assets (0.1.0)
+    engine_map (0.1.0)
       railties (>= 8.0)
 
 GEM
@@ -266,7 +266,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  eng_assets!
+  engine_map!
   importmap-rails
   nokogiri (= 1.18.10)
   propshaft
@@ -301,7 +301,7 @@ CHECKSUMS
   crass (1.0.7) sha256=94868719948664c89ddcaf0a37c65048413dfcb1c869470a5f7a7ceb5390b295
   date (3.6.0) sha256=18ac945c4e24ebd93534f8eab8c2fd8c5604b3e977105b3798d62a1e8d27b580
   drb (2.2.3) sha256=0b00d6fdb50995fe4a45dea13663493c841112e4068656854646f418fda13373
-  eng_assets (0.1.0)
+  engine_map (0.1.0)
   erb (6.0.7) sha256=c5ca6dc25b0ef974a44dc8f59fe847577122483b1968a38dec305c60bf91ee92
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   globalid (1.4.0) sha256=037f12fbf1d9d7a014d501c2d5c77356fd4ddd96d7a7991d6700bba96706f427

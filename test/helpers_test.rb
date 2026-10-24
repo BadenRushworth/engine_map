@@ -25,7 +25,7 @@ class HelpersTest < ActiveSupport::TestCase
   end
 
   test "unknown engine raises a helpful error" do
-    error = assert_raises(ArgumentError) { EngAssets.importmap_for("nope") }
+    error = assert_raises(ArgumentError) { EngineMap.importmap_for("nope") }
     assert_includes error.message, "sample_engine"
   end
 
@@ -35,10 +35,10 @@ class HelpersTest < ActiveSupport::TestCase
       own = Pathname.new(dir).join("own.rb")
       plain.write(%(pin "plain_x/application"\n))
       own.write(%(pin "own_x/standalone"\n))
-      EngAssets.register("plain_x", root: dir, importmap: plain)
-      EngAssets.register("own_x", root: dir, importmap: own)
-      assert_equal "plain_x/application", EngAssets.default_entry("plain_x")
-      assert_equal "own_x/standalone", EngAssets.default_entry("own_x")
+      EngineMap.register("plain_x", root: dir, importmap: plain)
+      EngineMap.register("own_x", root: dir, importmap: own)
+      assert_equal "plain_x/application", EngineMap.default_entry("plain_x")
+      assert_equal "own_x/standalone", EngineMap.default_entry("own_x")
     end
   end
 end

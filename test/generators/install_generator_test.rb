@@ -1,11 +1,11 @@
 require "test_helper"
 require "rails/generators/test_case"
-require "generators/eng_assets/install/install_generator"
+require "generators/engine_map/install/install_generator"
 
 DEST = File.expand_path("../tmp/install", __dir__)
 
-class FakeInstall < EngAssets::Generators::InstallGenerator
-  source_root EngAssets::Generators::InstallGenerator.source_root
+class FakeInstall < EngineMap::Generators::InstallGenerator
+  source_root EngineMap::Generators::InstallGenerator.source_root
   private
 
   def app = nil
@@ -40,7 +40,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
 
   test "merge mode wires everything and backs up the replaced stylesheet tag" do
     run_generator %w[--engine sample_engine]
-    assert_file "lib/sample_engine.rb", /EngAssets\.configure\(self\)/
+    assert_file "lib/sample_engine.rb", /EngineMap\.configure\(self\)/
     assert_file LAYOUT, /engine_stylesheet_link_tags "sample_engine", :all/
     assert_file LAYOUT, /javascript_import_module_tag "sample_engine\/application"/
     assert_file "config/importmap.rb", /pin "sample_engine\/application"/
@@ -60,7 +60,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     first = File.read(File.join(DEST, LAYOUT))
     run_generator %w[--engine sample_engine]
     assert_equal first, File.read(File.join(DEST, LAYOUT))
-    assert_equal 1, File.read(File.join(DEST, "lib/sample_engine.rb")).scan("EngAssets.configure").size
+    assert_equal 1, File.read(File.join(DEST, "lib/sample_engine.rb")).scan("EngineMap.configure").size
   end
 
   test "unknown engine name prints an error and changes nothing" do
@@ -93,8 +93,8 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     File.write File.join(DEST, "sample_engine.gemspec"),
                "Gem::Specification.new do |spec|\n  spec.add_dependency \"rails\"\nend\n"
     run_generator %w[--engine sample_engine]
-    assert_file "lib/sample_engine.rb", /\Arequire "eng_assets"\n/
-    assert_file "sample_engine.gemspec", /spec\.add_dependency "eng_assets"/
+    assert_file "lib/sample_engine.rb", /\Arequire "engine_map"\n/
+    assert_file "sample_engine.gemspec", /spec\.add_dependency "engine_map"/
   end
 
   test "layout without importmap tags gets them before </head>" do

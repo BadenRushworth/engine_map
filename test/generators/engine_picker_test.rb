@@ -1,5 +1,5 @@
 require "test_helper"
-require "eng_assets/generators/engine_picker"
+require "engine_map/generators/engine_picker"
 
 class EnginePickerTest < ActiveSupport::TestCase
   Fake = Struct.new(:root)
@@ -16,7 +16,7 @@ class EnginePickerTest < ActiveSupport::TestCase
   def picker(**opts)
     engines = [make_engine("admin_engine", "/work/admin"),
                make_engine("turbo", "/gems/turbo-rails-2.0")]
-    EngAssets::Generators::EnginePicker.new(engines, app: make_engine("host", "/work/host"),
+    EngineMap::Generators::EnginePicker.new(engines, app: make_engine("host", "/work/host"),
                                             gem_paths: ["/gems"], cwd: "/work/admin/lib", **opts)
   end
 
@@ -45,7 +45,7 @@ class EnginePickerTest < ActiveSupport::TestCase
 
   test "isolated engines keep the full name that matches their asset folder" do
     isolated = make_engine("scratch_engine", "/work/s", namespace: Struct.new(:name).new("ScratchEngine"))
-    picker = EngAssets::Generators::EnginePicker.new([isolated], gem_paths: [], cwd: "/")
+    picker = EngineMap::Generators::EnginePicker.new([isolated], gem_paths: [], cwd: "/")
     assert_equal "scratch_engine", picker.targets.first.name
   end
 end

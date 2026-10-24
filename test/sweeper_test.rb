@@ -17,15 +17,15 @@ class SweeperTest < ActiveSupport::TestCase
       file.write(%(pin "sweep_x/application"\n))
       # Rails' watcher ignores mtimes in the future, so work in the past.
       File.utime(Time.now - 60, Time.now - 60, file.to_s)
-      EngAssets.register("sweep_x", root: dir, importmap: file)
+      EngineMap.register("sweep_x", root: dir, importmap: file)
 
-      first = EngAssets.importmap_for("sweep_x")
-      assert_same first, EngAssets.importmap_for("sweep_x")
+      first = EngineMap.importmap_for("sweep_x")
+      assert_same first, EngineMap.importmap_for("sweep_x")
 
       file.write(%(pin "sweep_x/application"\npin "sweep_x/extra"\n))
       File.utime(Time.now - 30, Time.now - 30, file.to_s)
 
-      refute_same first, EngAssets.importmap_for("sweep_x")
+      refute_same first, EngineMap.importmap_for("sweep_x")
     end
   end
 end

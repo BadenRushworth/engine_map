@@ -1,4 +1,4 @@
-module EngAssets
+module EngineMap
   module Helpers
     def self.define_importmap_helper(name)
       define_method("#{name.tr('-', '_')}_javascript_importmap_tags") do |entry_point = nil|
@@ -9,8 +9,8 @@ module EngAssets
     # engine_javascript_importmap_tags "admin"                  # entry "admin/application"
     # engine_javascript_importmap_tags "admin", "admin/other"
     def engine_javascript_importmap_tags(engine, entry_point = nil)
-      javascript_importmap_tags(entry_point || EngAssets.default_entry(engine),
-                                importmap: EngAssets.importmap_for(engine))
+      javascript_importmap_tags(entry_point || EngineMap.default_entry(engine),
+                                importmap: EngineMap.importmap_for(engine))
     end
 
     # engine_stylesheet_link_tags "my_engine", :all

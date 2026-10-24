@@ -1,4 +1,4 @@
-module EngAssets
+module EngineMap
   module Generators
     Target = Struct.new(:name, :root, :namespace, :host, keyword_init: true) do
       def label = host ? "#{name} (host app)" : name
@@ -34,7 +34,7 @@ module EngAssets
 
       def build(engine, host: false)
         klass = engine.class
-        name = host ? klass.module_parent_name.to_s.underscore : EngAssets.name_for(klass)
+        name = host ? klass.module_parent_name.to_s.underscore : EngineMap.name_for(klass)
         namespace = klass.railtie_namespace&.name || name.camelize
         Target.new(name: name, root: Pathname.new(engine.root.to_s), namespace: namespace, host: host)
       end

@@ -1,6 +1,6 @@
 require "fileutils"
 
-module EngAssets
+module EngineMap
   module Generators
     # Failsafe file edits for generators. Order of preference:
     #   1. safe_inject  - add a line next to an anchor (no backup needed)

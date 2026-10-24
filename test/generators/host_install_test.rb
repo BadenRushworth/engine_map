@@ -1,11 +1,11 @@
 require "test_helper"
 require "rails/generators/test_case"
-require "generators/eng_assets/install/install_generator"
+require "generators/engine_map/install/install_generator"
 
 HOST_DEST = File.expand_path("../tmp/install_host", __dir__)
 
-class FakeHostInstall < EngAssets::Generators::InstallGenerator
-  source_root EngAssets::Generators::InstallGenerator.source_root
+class FakeHostInstall < EngineMap::Generators::InstallGenerator
+  source_root EngineMap::Generators::InstallGenerator.source_root
 
   private
 
@@ -37,11 +37,11 @@ class HostInstallTest < Rails::Generators::TestCase
     File.write File.join(HOST_DEST, LAYOUT), "<head>\n  <%= javascript_importmap_tags %>\n</head>\n"
     FileUtils.mkdir_p File.join(HOST_DEST, "app/assets/config")
     File.write File.join(HOST_DEST, MANIFEST), "//= link_tree ../../javascript .js\n"
-    @saved = EngAssets.configured.dup
-    EngAssets.configured.replace("sample_engine" => :merge, "own_only" => :own)
+    @saved = EngineMap.configured.dup
+    EngineMap.configured.replace("sample_engine" => :merge, "own_only" => :own)
   end
 
-  teardown { EngAssets.configured.replace(@saved) }
+  teardown { EngineMap.configured.replace(@saved) }
 
   test "imports merge-mode engines only" do
     run_generator %w[--engine host_app]

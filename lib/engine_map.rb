@@ -1,8 +1,8 @@
-require "eng_assets/version"
-require "eng_assets/helpers"
-require "eng_assets/railtie"
+require "engine_map/version"
+require "engine_map/helpers"
+require "engine_map/railtie"
 
-module EngAssets
+module EngineMap
   Registration = Struct.new(:name, :root, :importmap_path, keyword_init: true)
 
   class << self
@@ -15,7 +15,7 @@ module EngAssets
       @registry ||= {}
     end
 
-    # EngAssets.register "admin", root: Admin::Engine.root
+    # EngineMap.register "admin", root: Admin::Engine.root
     def register(name, root:, importmap: nil)
       name = name.to_s
       root = Pathname.new(root)
@@ -35,9 +35,9 @@ module EngAssets
     end
 
     # Called from an engine class body:
-    #   EngAssets.configure(self)                    # merge into host importmap (default)
-    #   EngAssets.configure(self, importmap: :own)   # independent map
-    #   EngAssets.configure(self, importmap: :both)
+    #   EngineMap.configure(self)                    # merge into host importmap (default)
+    #   EngineMap.configure(self, importmap: :own)   # independent map
+    #   EngineMap.configure(self, importmap: :both)
     # The name is resolved inside initializers, after the class body (and
     # isolate_namespace) has run.
     def configure(engine, importmap: :merge, name: nil)
@@ -46,42 +46,42 @@ module EngAssets
       end
       id = engine.name
 
-      engine.initializer "eng_assets.record.#{id}" do
-        EngAssets.configured[name || EngAssets.name_for(engine)] = importmap
+      engine.initializer "engine_map.record.#{id}" do
+        EngineMap.configured[name || EngineMap.name_for(engine)] = importmap
       end
 
-      engine.initializer "eng_assets.assets.#{id}" do |app|
+      engine.initializer "engine_map.assets.#{id}" do |app|
         js = engine.root.join("app/javascript")
         app.config.assets.paths << js.to_s if app.config.respond_to?(:assets) && js.exist?
       end
 
       # Sprockets only serves what is listed for precompile. Propshaft needs nothing.
-      engine.initializer "eng_assets.precompile.#{id}", after: "eng_assets.assets.#{id}" do |app|
+      engine.initializer "engine_map.precompile.#{id}", after: "engine_map.assets.#{id}" do |app|
         next if defined?(Propshaft) || !app.config.respond_to?(:assets) || !app.config.assets.respond_to?(:precompile)
-        EngAssets.sprockets_logical_names(engine.root, name || EngAssets.name_for(engine)).each do |logical|
+        EngineMap.sprockets_logical_names(engine.root, name || EngineMap.name_for(engine)).each do |logical|
           app.config.assets.precompile << logical
         end
       end
 
       # Make importmap-rails notice new or changed engine JS (host sweeper only
       # watches the host's folders). Must run before importmap builds its watcher.
-      engine.initializer "eng_assets.sweeper.#{id}", before: "importmap.cache_sweeper" do |app|
+      engine.initializer "engine_map.sweeper.#{id}", before: "importmap.cache_sweeper" do |app|
         js = engine.root.join("app/javascript")
-        if EngAssets.reloading?(app) && js.exist? && app.config.respond_to?(:importmap)
+        if EngineMap.reloading?(app) && js.exist? && app.config.respond_to?(:importmap)
           app.config.importmap.cache_sweepers << js
         end
       end
 
       if %i[merge both].include?(importmap)
-        engine.initializer "eng_assets.importmap_merge.#{id}", before: "importmap" do |app|
+        engine.initializer "engine_map.importmap_merge.#{id}", before: "importmap" do |app|
           file = engine.root.join("config/importmap.rb")
           app.config.importmap.paths << file if file.exist? && app.config.respond_to?(:importmap)
         end
       end
 
       if %i[own both].include?(importmap)
-        engine.initializer "eng_assets.importmap_own.#{id}" do
-          EngAssets.register(name || EngAssets.name_for(engine), root: engine.root,
+        engine.initializer "engine_map.importmap_own.#{id}" do
+          EngineMap.register(name || EngineMap.name_for(engine), root: engine.root,
                              importmap: engine.root.join("config/importmap.rb"))
         end
       end
