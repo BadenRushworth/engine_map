@@ -13,3 +13,4 @@ gemfiles/*.lock
 test/dummy/public/assets/
 coverage/
 Gemfile.lock
+gemfiles/*.lock
