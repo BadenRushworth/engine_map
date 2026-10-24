@@ -1,0 +1,3 @@
+// JavaScript entry point for <%= @target.name %>.
+// Merged mode: imported by the layout via javascript_import_module_tag.
+// Own mode: imported by <%= @target.name %>_javascript_importmap_tags.

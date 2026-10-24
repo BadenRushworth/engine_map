@@ -1,0 +1,12 @@
+source "https://rubygems.org"
+
+gemspec path: ".."
+
+gem "rails"
+gem "sprockets-rails"
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
+gem "tzinfo-data"
+gem "nokogiri", "1.18.10"
+gem "simplecov", require: false

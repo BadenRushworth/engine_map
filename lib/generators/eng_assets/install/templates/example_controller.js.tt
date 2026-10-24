@@ -1,0 +1,6 @@
+import { Controller } from "@hotwired/stimulus"
+
+// Use in views as: data-controller="<%= @target.name.dasherize %>--example"
+export default class extends Controller {
+  connect() {}
+}

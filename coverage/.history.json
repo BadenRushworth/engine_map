@@ -1,0 +1,1171 @@
+{
+  "simplecov_history": {
+    "format_version": 1,
+    "entries": [
+      {
+        "created_at": "2026-10-24T01:54:33Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 75.4,
+          "branch": 31.25
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 85.0,
+            "branch": 41.66
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 47.05,
+            "branch": 0.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T01:58:19Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.08,
+          "branch": 50.0
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.0,
+            "branch": 50.0
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T02:20:14Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 93.45,
+          "branch": 57.14
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.0,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 91.3,
+            "branch": 63.15
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T02:30:13Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 94.89,
+          "branch": 55.81
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.0,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 91.3,
+            "branch": 63.15
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T02:40:33Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 87.56,
+          "branch": 55.07
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.0,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 75.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 91.3,
+            "branch": 68.42
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 71.87,
+            "branch": 42.3
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T02:43:36Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 70.14,
+          "branch": 36.23
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 80.0,
+            "branch": 41.66
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 93.33,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 50.0,
+            "branch": 26.31
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 47.05,
+            "branch": 0.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 71.87,
+            "branch": 42.3
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T02:46:11Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 94.02,
+          "branch": 65.21
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.0,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 75.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 91.3,
+            "branch": 68.42
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 92.18,
+            "branch": 69.23
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T04:16:24Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 94.52,
+          "branch": 68.35
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.45,
+            "branch": 50.0
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 75.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 91.3,
+            "branch": 68.42
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 93.58,
+            "branch": 76.47
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T04:17:32Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 94.52,
+          "branch": 69.62
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.45,
+            "branch": 57.14
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 75.0
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 91.3,
+            "branch": 68.42
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 93.58,
+            "branch": 76.47
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T04:28:25Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.15,
+          "branch": 72.94
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 93.47,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 94.04,
+            "branch": 76.31
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T04:30:42Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.21,
+          "branch": 73.56
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 93.47,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 94.25,
+            "branch": 77.5
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:03:44Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.45,
+          "branch": 74.19
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 93.47,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 94.94,
+            "branch": 78.26
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:08:02Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.29,
+          "branch": 74.74
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 93.61,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 94.59,
+            "branch": 78.84
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:08:46Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.36,
+          "branch": 74.74
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.11,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 94.59,
+            "branch": 78.84
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:09:20Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 94.29,
+          "branch": 74.74
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 89.09,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 94.59,
+            "branch": 78.84
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:10:36Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.75,
+          "branch": 74.74
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.11,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.49,
+            "branch": 78.84
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:18:27Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.75,
+          "branch": 74.74
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.11,
+            "branch": 73.68
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.49,
+            "branch": 78.84
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:19:28Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.8,
+          "branch": 75.24
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.49,
+            "branch": 78.84
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:21:34Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.84,
+          "branch": 75.72
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 62.5
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 94.11,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:49:45Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 91.81,
+          "branch": 71.17
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 85.45,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 70.83,
+            "branch": 20.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:51:46Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 91.81,
+          "branch": 71.17
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 85.45,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 70.83,
+            "branch": 20.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:51:49Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.37,
+          "branch": 73.87
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 96.36,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:53:26Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 68.67,
+          "branch": 25.0
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 80.0,
+            "branch": 38.88
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 37.5,
+            "branch": 0.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:54:05Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.37,
+          "branch": 73.87
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 96.36,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:54:59Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.37,
+          "branch": 73.87
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 96.36,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:56:09Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 91.81,
+          "branch": 71.17
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 85.45,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 70.83,
+            "branch": 20.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:56:12Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.37,
+          "branch": 73.87
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 96.36,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:56:15Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 91.81,
+          "branch": 71.17
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 85.45,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 70.83,
+            "branch": 20.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T08:56:18Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.37,
+          "branch": 73.87
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 96.36,
+            "branch": 61.11
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T09:01:03Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 91.52,
+          "branch": 71.79
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 85.5,
+            "branch": 66.66
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 70.83,
+            "branch": 20.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T09:02:02Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 70.1,
+          "branch": 35.29
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 79.71,
+            "branch": 50.0
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 37.5,
+            "branch": 0.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T09:02:33Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 94.91,
+          "branch": 74.35
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 94.2,
+            "branch": 66.66
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T09:03:22Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 91.86,
+          "branch": 71.79
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 86.95,
+            "branch": 66.66
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 70.83,
+            "branch": 20.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      },
+      {
+        "created_at": "2026-10-24T09:03:24Z",
+        "branch": null,
+        "commit": null,
+        "totals": {
+          "line": 95.25,
+          "branch": 74.35
+        },
+        "groups": {},
+        "files": {
+          "lib/eng_assets.rb": {
+            "line": 95.65,
+            "branch": 66.66
+          },
+          "lib/eng_assets/generators/engine_picker.rb": {
+            "line": 100.0,
+            "branch": 87.5
+          },
+          "lib/eng_assets/generators/safe_files.rb": {
+            "line": 94.44,
+            "branch": 76.19
+          },
+          "lib/eng_assets/helpers.rb": {
+            "line": 87.5,
+            "branch": 50.0
+          },
+          "lib/eng_assets/railtie.rb": {
+            "line": 100.0,
+            "branch": 100.0
+          },
+          "lib/generators/eng_assets/install/install_generator.rb": {
+            "line": 95.61,
+            "branch": 79.62
+          }
+        }
+      }
+    ]
+  }
+}

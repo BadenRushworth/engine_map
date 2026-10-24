@@ -1,0 +1,10 @@
+// Entry point for <%= @target.name %>'s own importmap only. Never import this
+// from a merged layout: it starts a second Stimulus application.
+import "<%= @target.name %>/application"
+import { Application } from "@hotwired/stimulus"
+import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
+
+const application = Application.start()
+eagerLoadControllersFrom("controllers", application)
+
+export { application }

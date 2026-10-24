@@ -1,0 +1,1 @@
+pin "sample/application"

@@ -1,0 +1,3 @@
+# Pins for <%= @target.name %>. Merged into the host importmap by default,
+# or used alone via <%= @target.name %>_javascript_importmap_tags.
+<%= importmap_lines %>

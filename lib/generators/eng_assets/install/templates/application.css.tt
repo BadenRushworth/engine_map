@@ -1,0 +1,3 @@
+/* Styles for <%= @target.name %>. Every .css file in this folder is linked
+ * automatically by engine_stylesheet_link_tags "<%= @target.name %>", :all
+ * (alphabetical order, so application.css loads first). */
