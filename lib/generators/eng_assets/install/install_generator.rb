@@ -29,7 +29,6 @@ module EngAssets
         self.destination_root = @target.root.to_s
         say_status :target, @target.label, :green
         @before = snapshot
-        say "Host apps need no setup: engines merge into your importmap automatically.", :yellow if host?
       end
 
       def configure_engine
@@ -76,7 +75,16 @@ module EngAssets
       def update_layout
         return if host?
         layout = layout_file
-        return needs_manual("no layout found (add the engine_stylesheet_link_tags and importmap helpers by hand)") unless layout
+        unless layout
+          needs_manual("no layout found (add these inside <head> of the layout your engine uses)")
+          js = if options[:importmap] == "own"
+                 %(    <%= #{name}_javascript_importmap_tags %>)
+               else
+                 %(    <%= javascript_importmap_tags %>\n    <%= javascript_import_module_tag "#{name}/application" %>)
+               end
+          say %(    <%= engine_stylesheet_link_tags "#{name}", :all %>\n#{js}), :cyan
+          return
+        end
 
         add_stylesheet_tag(layout)
         has_tags = File.read(File.join(destination_root, layout)).match?(IMPORTMAP_TAGS)
@@ -94,9 +102,19 @@ module EngAssets
         end
       end
 
+      def wire_host
+        return unless host?
+        layout = "app/views/layouts/application.html.erb"
+        path = File.join(destination_root, layout)
+        if File.exist?(path) && !File.read(path).match?(IMPORTMAP_TAGS)
+          needs_manual("#{layout} has no javascript_importmap_tags (add it before </head>)")
+        end
+        check_sprockets_manifest
+        import_configured_engines
+      end
+
       # Must stay the last public method: Rails runs public methods in order.
       def finish
-        return if host?
         if @manual_steps.to_i > 0
           say "\n#{@manual_steps} step(s) need a manual edit (see the 'manual' lines above).", :yellow
         elsif snapshot == @before
@@ -107,6 +125,31 @@ module EngAssets
       end
 
       private
+
+      def check_sprockets_manifest
+        return if defined?(Propshaft)
+        manifest = "app/assets/config/manifest.js"
+        return needs_manual("#{manifest} not found (Sprockets must link app/javascript)") unless File.exist?(File.join(destination_root, manifest))
+        return if File.read(File.join(destination_root, manifest)).include?("javascript")
+        safe_inject manifest, "//= link_tree ../../javascript .js\n//= link_tree ../../../vendor/javascript .js", before: /\A/
+      end
+
+      def import_after_last(entry, line)
+        last = File.readlines(File.join(destination_root, entry)).grep(/^import\b.*["'];?\s*$/).last
+        if last
+          safe_inject entry, line, after: last.chomp
+        else
+          safe_inject entry, line, before: /\A/
+        end
+      end
+
+      def import_configured_engines
+        entry = "app/javascript/application.js"
+        names = EngAssets.configured.select { |_, mode| %i[merge both].include?(mode) }.keys.sort
+        return say_status(:skipped, "no engines using EngAssets in merge mode", :yellow) if names.empty?
+        return needs_manual("#{entry} not found (import each engine's application module by hand)") unless File.exist?(File.join(destination_root, entry))
+        names.each { |n| import_after_last(entry, %(import "#{n}/application")) }
+      end
 
       def snapshot
         files = Dir[File.join(destination_root, "{app,config,lib}/**/*"), File.join(destination_root, "*.gemspec")]

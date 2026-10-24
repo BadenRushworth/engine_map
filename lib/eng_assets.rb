@@ -6,6 +6,11 @@ module EngAssets
   Registration = Struct.new(:name, :root, :importmap_path, keyword_init: true)
 
   class << self
+    # Engines that called configure, as { "admin" => :merge }. Filled at boot.
+    def configured
+      @configured ||= {}
+    end
+
     def registry
       @registry ||= {}
     end
@@ -40,6 +45,10 @@ module EngAssets
         raise ArgumentError, "importmap must be :merge, :own or :both (got #{importmap.inspect})"
       end
       id = engine.name
+
+      engine.initializer "eng_assets.record.#{id}" do
+        EngAssets.configured[name || EngAssets.name_for(engine)] = importmap
+      end
 
       engine.initializer "eng_assets.assets.#{id}" do |app|
         js = engine.root.join("app/javascript")

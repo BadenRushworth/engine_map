@@ -155,4 +155,11 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     run_generator %w[--engine sample_engine]
     assert_no_file "app/views/layouts/sample_engine/standalone.html.erb"
   end
+
+  test "missing layout prints own-mode tags when installing in own mode" do
+    FileUtils.rm_f File.join(DEST, LAYOUT)
+    out = run_generator %w[--engine sample_engine --importmap own]
+    assert_match(/sample_engine_javascript_importmap_tags/, out)
+    refute_match(/javascript_import_module_tag/, out)
+  end
 end
