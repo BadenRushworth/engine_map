@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = EngineMap::VERSION
   spec.authors     = [ "Baden" ]
   spec.email       = [ "baden.rushworth@gmail.com" ]
-  spec.homepage    = "https://github.com/badenrushworth/engine_map"
+  spec.homepage    = "https://github.com/BadenRushworth/engine_map"
   spec.summary     = "Asset helpers and an install generator for Rails engines."
   spec.description = "Stylesheet :all helper, merged or independent importmaps, and namespaced " \
                      "Stimulus controllers for Rails engines, on Propshaft or Sprockets, " \
