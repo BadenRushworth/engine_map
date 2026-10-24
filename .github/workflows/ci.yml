@@ -53,6 +53,9 @@ jobs:
           ruby-version: ruby-3.4.1
           bundler-cache: true
 
+      - name: Install Sprockets bundle
+        run: bundle install --gemfile=gemfiles/sprockets.gemfile
+
       - name: Run tests
         env:
           RAILS_ENV: test
